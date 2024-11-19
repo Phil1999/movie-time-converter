@@ -91,6 +91,7 @@ The microservice will respond with a JSON object containing:
 }
 ```
 
+![UML_service](https://github.com/user-attachments/assets/06833472-21d5-47f2-ad19-5b69b1a08995)
 
 
 
