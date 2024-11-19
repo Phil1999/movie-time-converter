@@ -62,7 +62,7 @@ If the query parameter is invalid, the API returns a 400 error:
 
 ## Communication Contract: Movie Runtime Microservice
 
-This microservice accepts a runtime in minutes and returns a formatted string with the format `Xhr Ymin`.
+This microservice accepts a runtime in minutes and returns a formatted string with the format `Xhr Ymin`. See example/test.ts for code on calling the API.
 
 ## Requesting Data
 1. Send a **GET** request to the endpoint: http://localhost:3000/format-runtime
