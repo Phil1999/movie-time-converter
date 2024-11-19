@@ -37,30 +37,7 @@ bun run dev
 
 The server will start at http://localhost:3000.
 
-## API Usage
-
-### GET /format-runtime
-Params: runtime (query parameter, required): Runtime in minutes (postive integer)
-
-### Example Request
-```bash
-curl "http://localhost:3000/format-runtime?runtime=9999"
-
-{
-  "original_runtime": 9999,
-  "formatted_runtime": "166hr 39min"
-}
-```
-
-### Error Handling
-If the query parameter is invalid, the API returns a 400 error:
-```bash
-{
-  "error": "Runtime must be a positive integer"
-}
-```
-
-## Communication Contract: Movie Runtime Microservice
+# API Usage
 
 This microservice accepts a runtime in minutes and returns a formatted string with the format `Xhr Ymin`. See example/test.ts for code on calling the API.
 
@@ -90,6 +67,13 @@ The microservice will respond with a JSON object containing:
   "formatted_runtime": "2hr 14min"
 }
 ```
+### Example Error Response:
+```json
+{
+  "error": "Runtime must be a positive integer"
+}
+```
+
 
 ![UML_service](https://github.com/user-attachments/assets/06833472-21d5-47f2-ad19-5b69b1a08995)
 
