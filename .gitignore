@@ -1,0 +1,16 @@
+# Node.js and Bun dependencies
+node_modules/
+bun.lockb
+
+# Compiled JavaScript and output files
+dist/
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
