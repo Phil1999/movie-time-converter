@@ -60,3 +60,37 @@ If the query parameter is invalid, the API returns a 400 error:
 }
 ```
 
+## Communication Contract: Movie Runtime Microservice
+
+This microservice accepts a runtime in minutes and returns a formatted string with the format `Xhr Ymin`.
+
+## Requesting Data
+1. Send a **GET** request to the endpoint: http://localhost:3000/format-runtime
+2. Include the `runtime` query parameter.
+
+### Example Request:
+```javascript
+const fetch = require('node-fetch');
+
+fetch('http://localhost:3000/format-runtime?runtime=134')
+.then(res => res.json())
+.then(data => console.log(data))
+.catch(err => console.error(err));
+```
+
+## Receiving Data
+The microservice will respond with a JSON object containing:
+* original_runtime: The input runtime in minutes.
+* formatted_runtime: The formatted string.
+
+### Example Response:
+```json
+{
+  "original_runtime": 134,
+  "formatted_runtime": "2hr 14min"
+}
+```
+
+
+
+
